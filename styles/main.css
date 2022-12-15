@@ -33,7 +33,7 @@ body {
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: 3rem;
   font-weight: lighter;
 }
 
@@ -53,6 +53,7 @@ body {
 .text-box p {
   margin: 0;
   text-align: left;
+  font-size: 1.5rem;
 }
 
 .text-box span {
@@ -67,6 +68,7 @@ body {
   padding: .5rem 1rem;
   position: absolute;
   right: 5px;
+  cursor: pointer;
 }
 
 .five p {

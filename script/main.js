@@ -1,28 +1,26 @@
-// trigger to play music in the background with sweetalert
+//Trigger bật nhạc 
 window.addEventListener('load', () => {
   Swal.fire({
-    title: 'Do you want to play music in the background?',
-    // text: "You won't be able to revert this!",
-    icon: 'warning',
+    title: 'EM CÓ YÊU ANH KHÔNG',
+    icon: 'question',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes',
-    cancelButtonText: 'No',
+    confirmButtonText: 'DẠ CÓ Ạ :))',
+    cancelButtonText: 'EM YÊU ANHH',
   }).then((result) => {
     if (result.isConfirmed) {
       document.querySelector('.song').play();
       resolveFetch().then(animationTimeline());
     } else {
+      document.querySelector('.song').play();
       resolveFetch().then(animationTimeline());
     }
   });
 });
 
 
-// animation timeline
 const animationTimeline = () => {
-  // split chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
@@ -76,12 +74,12 @@ const animationTimeline = () => {
         y: 10
       },
     "-=1")
-    .from(".three", 0.7, {
+    .from(".three", 2.5, {
       opacity: 0,
       y: 10
     })
     .to(".three",
-      0.7,
+      2.5,
       {
         opacity: 0,
         y: 10
@@ -118,14 +116,14 @@ const animationTimeline = () => {
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-2", 0.7, ideaTextTrans)
     .to(".idea-2", 0.7, ideaTextTransLeave, "+=2.5")
-    .from(".idea-3", 0.7, ideaTextTrans)
-    .to(".idea-3 strong", 0.5, {
+    .from(".idea-3", 0.9, ideaTextTrans)
+    .to(".idea-3 strong", 0.7, {
       scale: 1.2,
       x: 10,
       backgroundColor: "rgb(21, 161, 237)",
       color: "#fff",
     })
-    .to(".idea-3", 0.7, ideaTextTransLeave, "+=2.5")
+    .to(".idea-3", 0.9, ideaTextTransLeave, "+=2.5")
     .from(".idea-4", 0.7, ideaTextTrans)
     .to(".idea-4", 0.7, ideaTextTransLeave, "+=2.5")
     .from(
